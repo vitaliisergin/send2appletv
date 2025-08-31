@@ -1,0 +1,12 @@
+ytd-menu-renderer #top-level-buttons-computed ytd-button-renderer#send-to-atv-btn {
+  margin-inline-start: 8px !important;
+}
+
+ytd-menu-renderer #top-level-buttons-computed ytd-button-renderer#send-to-atv-btn:last-child {
+  margin-inline-end: 8px !important;
+}
+
+
+ytd-reel-video-renderer #actions ytd-button-renderer#send-to-atv-btn {
+  margin-left: 6px !important;
+}

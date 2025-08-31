@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Send YouTube to Apple TV (via Home Assistant)</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <h1>Send YouTube to Apple TV (via Home Assistant)</h1>
+
+    <div class="row">
+      <label for="haBaseUrl">Home Assistant URL</label>
+      <input id="haBaseUrl" placeholder="https://homeassistant.local:8123">
+      <div class="hint">Full base URL of your Home Assistant (e.g. https://…:8123, without /api at the end).</div>
+    </div>
+
+    <div class="row">
+      <label for="haToken">Long-Lived Access Token</label>
+      <input id="haToken" type="password" placeholder="paste your token here">
+      <div class="hint">
+        Create in Home Assistant: Profile → Security → Long-lived access tokens → Create token.
+        Copy it once and keep it secret.
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="entityId">Apple TV entity_id</label>
+      <input id="entityId" placeholder="media_player.living_room">
+      <div class="hint">Entity ID of your Apple TV in Home Assistant (Settings → Devices & Services → Entities).</div>
+    </div>
+
+    <div class="row">
+      <button id="save">Save</button>
+      <span id="status" class="hint"></span>
+    </div>
+
+    <script src="options.js" defer></script>
+  </body>
+</html>

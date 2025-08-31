@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Send2AppleTV",
+  "description": "Adds a YouTube button in Chrome that sends the current video via Home Assistant to your Apple TV YouTube app.",
+  "version": "1.2.0",
+
+  "action": {
+    "default_title": "Send2AppleTV"
+  },
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "css": ["content.css"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
